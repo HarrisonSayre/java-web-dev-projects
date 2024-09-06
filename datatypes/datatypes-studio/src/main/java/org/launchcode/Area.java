@@ -9,7 +9,7 @@ public class Area {
 
         System.out.println("Enter a radius:");
         if(!input.hasNextDouble()) {
-            System.out.println("Please enter a valid number");
+            System.out.println("Invalid number entered. Exiting program");
             System.exit(0);
         }
         double radius = input.nextDouble();
