@@ -8,9 +8,10 @@ public class Area {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter a radius:");
-        if(!input.hasNextDouble()) {
-            System.out.println("Invalid number entered. Exiting program");
-            System.exit(0);
+        while(!input.hasNextDouble()) {
+            System.out.println("Please enter a valid number");
+            input = new Scanner(System.in);
+            //System.exit(0);
         }
         double radius = input.nextDouble();
 
