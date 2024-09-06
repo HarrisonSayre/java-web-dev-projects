@@ -8,6 +8,10 @@ public class Area {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter a radius:");
+        if(!input.hasNextDouble()) {
+            System.out.println("Please enter a valid number");
+            System.exit(0);
+        }
         double radius = input.nextDouble();
 
         //double area = 3.14 * radius * radius;
