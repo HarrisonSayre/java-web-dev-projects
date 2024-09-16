@@ -60,7 +60,7 @@ public class Student {
     //  than just the class fields.
 
     public String toString(){
-        return ("Name: "+this.getName()+" Year: "+this.getGradeLevel(this.numberOfCredits)+ "Student ID Number: "+this.getStudentId()+" GPA: "+this.getGpa()+" Number of Credits: "+this.getNumberOfCredits());
+        return ("Name: "+this.getName()+" Year: "+this.getGradeLevel(this.numberOfCredits)+ " Student ID Number: "+this.getStudentId()+" GPA: "+this.getGpa()+" Number of Credits: "+this.getNumberOfCredits());
     }
 
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
