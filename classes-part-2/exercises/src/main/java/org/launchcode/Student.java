@@ -30,20 +30,53 @@ public class Student {
 
 
     //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
-//        // Determine the grade level of the student based on numberOfCredits
-//    }
+    public String getGradeLevel(int credits) {
+        if(credits < 30) {
+            return "Freshman";
+        }
+        else if(credits < 60){
+            return "Sophomore";
+        }
+        else if(credits < 90){
+            return "Junior";
+        }
+        else{
+            return "Senior";
+        }
+        // Determine the grade level of the student based on numberOfCredits
+    }
 
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
-        // Update the appropriate fields: numberOfCredits, gpa
+        double totalQuality = this.gpa * this.numberOfCredits;
+        totalQuality += courseCredits*grade;
+        this.numberOfCredits+= courseCredits;
+        this.gpa = totalQuality/this.numberOfCredits;
+
+        //Update the appropriate fields: numberOfCredits, gpa
     }
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
     //  than just the class fields.
 
+    public String toString(){
+        return ("Name: "+this.getName()+" Year: "+this.getGradeLevel(this.numberOfCredits)+ "Student ID Number: "+this.getStudentId()+" GPA: "+this.getGpa()+" Number of Credits: "+this.getNumberOfCredits());
+    }
+
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Student objects equal.
+    public boolean equals(Object tobBeCompared){
+        if(tobBeCompared == this)
+            return true;
+        else if(tobBeCompared == null){
+            return false;
+        }
+        else if(tobBeCompared.getClass() != getClass())
+        {
+            return false;
+        }
+        return this.getStudentId() == ((Student) tobBeCompared).getStudentId();
+    }
 
     public String getName() {
         return name;
