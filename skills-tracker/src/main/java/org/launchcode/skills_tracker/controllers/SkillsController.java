@@ -89,11 +89,38 @@ public class SkillsController {
                 "<body>" +
 
                 "<h1>"+name+"</h1>" +
-                "<ol>" +
-                "<li>"+menu1+"</li>" +
-                "<li>"+menu2+"</li>" +
-                "<li>"+menu3+"</li>" +
+//                "<ol>" +
+//                "<li>"+menu1+"</li>" +
+//                "<li>"+menu2+"</li>" +
+//                "<li>"+menu3+"</li>" +
+//                "</ol>"+
+
+                "<table border=\"1\">\n" +
+                "        <ol>\n" +
+                "            <tr>\n" +
+                "                <td>\n" +
+                "                    <ol>\n" +
+                "                        <li>"+menu1+"</li>\n" +
+                "                </td>\n" +
+                //"</ol>\n" + //Added
+                "            </tr>\n" +
+                "            <tr>\n" +
+                "                <td>\n" +
+                "                    <ol>\n" +
+                "                        <li>"+menu2+"</li>\n" +
+                "                </td>\n" +
+                "        </ol>\n" +
+                "        </tr>\n" +
+                "        <tr>\n" +
+                "            <td>\n" +
+                "<ol>\n"+
+                "                <li>"+menu3+"</li>\n" +
+                "            </td>\n" +
                 "</ol>"+
+                "        </tr>\n" +
+                "        </tr>\n" +
+                "        </ol>\n" +
+                "    </table>"+
 
                 "</body>" +
                 "</html>";
