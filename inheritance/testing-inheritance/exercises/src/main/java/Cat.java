@@ -58,7 +58,6 @@ public class Cat {
         }
 
         //TEST!
-        hungry = true;
         hungry = false;
     }
 
