@@ -1,11 +1,11 @@
 package org.launchcode;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         // Test out your Divide() function!
-
         Divide(1, 0);
 
         HashMap<String, String> studentFiles = new HashMap<>();
@@ -14,12 +14,12 @@ public class Main {
         studentFiles.put("Elizabeth", "MyCode.java");
         studentFiles.put("Stefanie", "CoolProgram.java");
 
-        //String nothing = null;
-
-        CheckFileExtension("FILLER");
-
         // Test out your CheckFileExtension() function!
+        for (Map.Entry<String, String> file : studentFiles.entrySet()) {
+            CheckFileExtension(file.getValue());
+        }
     }
+
 
     public static void Divide(int x, int y)
     {
@@ -33,34 +33,22 @@ public class Main {
         //int z = x/y;
     }
 
-//    public class FileExtensionException extends NullPointerException{
-//
-//    }
-//
-//    public NullPointerException(String s) {
-//        super(s);
-//    }
-
-    public static int CheckFileExtension(String fileName)
-    {
-        // Write code here!
-        String fileExtension = fileName;
-        fileExtension = null;
-        if(fileExtension == null || fileExtension.isEmpty()) {
+    public static int CheckFileExtension(String fileName) {
+        if(fileName == null || fileName.isEmpty()) {
             //System.out.println("EMPTY!");
             try {
-                throw new NullPointerException();
+                throw new FileExtensionException("Cannot have an empty or null file extension");
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
             return -1;
         }
-
-        if(fileExtension.equals(".java")){
+        if(fileName.endsWith(".java")) {
+            //int testind = fileName.lastIndexOf(".");
+            //fileExtension = fileName.substring(testind);
+            //if(fileExtension.equals(".java")){
             return 1;
         }
         return 0;
     }
-
-
 }
