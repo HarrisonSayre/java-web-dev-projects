@@ -34,7 +34,6 @@ public class Main {
 
     public static int CheckFileExtension(String fileName) {
         if(fileName == null || fileName.isEmpty()) {
-            //System.out.println("EMPTY!");
             try {
                 throw new FileExtensionException("Cannot have an empty or null file extension");
             } catch (NullPointerException e) {
@@ -43,9 +42,6 @@ public class Main {
             return -1;
         }
         if(fileName.endsWith(".java")) {
-            //int testind = fileName.lastIndexOf(".");
-            //fileExtension = fileName.substring(testind);
-            //if(fileExtension.equals(".java")){
             return 1;
         }
         return 0;
