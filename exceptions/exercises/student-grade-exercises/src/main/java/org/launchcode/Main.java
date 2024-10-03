@@ -44,6 +44,8 @@ public class Main {
         if(fileName.endsWith(".java")) {
             return 1;
         }
-        return 0;
+        else{
+            return 0;
+        }
     }
 }
