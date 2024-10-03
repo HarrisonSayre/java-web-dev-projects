@@ -15,8 +15,8 @@ public class Main {
         studentFiles.put("Stefanie", "CoolProgram.java");
 
         // Test out your CheckFileExtension() function!
-        for (Map.Entry<String, String> file : studentFiles.entrySet()) {
-            CheckFileExtension(file.getValue());
+        for (String file : studentFiles.values()) {
+            CheckFileExtension(file);
         }
     }
 
